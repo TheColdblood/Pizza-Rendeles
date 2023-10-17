@@ -1,2 +1,2 @@
 # Pizza-Rendeles
-Github-on módosítva: simon Gergő
+Github-on módosítva: Simon Gergő
