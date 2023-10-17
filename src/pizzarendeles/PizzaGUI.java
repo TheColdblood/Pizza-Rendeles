@@ -370,13 +370,13 @@ public class PizzaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMegszakitasActionPerformed
 
     private void btnRendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRendelesActionPerformed
-       // boolean vanDarabValasztva = spnrDarab.getSelectedIndex() > 0;
+       //boolean vanDarabValasztva = spnrDarab.get() > 0;
         String uzenet;
-       // if(vanDarabValasztva){
-            uzenet = "Rendelés elküldve!";
-       // }else{
-       //     uzenet = "Nem adható le a rendelés!";
-       // }
+        //if(vanDarabValasztva){
+            uzenet = "Rendelés elküldve! \n 1500ft";
+        //}else{
+        //    uzenet = "Nem adható le a rendelés!";
+        //}
         JOptionPane.showMessageDialog(null, uzenet, "MEGRENDELVE", 1);
     }//GEN-LAST:event_btnRendelesActionPerformed
 
