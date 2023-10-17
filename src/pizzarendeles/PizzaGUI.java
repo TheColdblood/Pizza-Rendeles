@@ -38,6 +38,7 @@ public class PizzaGUI extends javax.swing.JFrame {
         lblCim = new javax.swing.JLabel();
         lblDarab = new javax.swing.JLabel();
         spnrDarab = new javax.swing.JSpinner();
+        jLabel1 = new javax.swing.JLabel();
         pnlMeret = new javax.swing.JPanel();
         rbtnKozepes = new javax.swing.JRadioButton();
         rbtnNagy = new javax.swing.JRadioButton();
@@ -73,6 +74,9 @@ public class PizzaGUI extends javax.swing.JFrame {
 
         lblDarab.setText("Darab:");
 
+        jLabel1.setText("Tesztverzió");
+        jLabel1.setToolTipText("");
+
         javax.swing.GroupLayout pnlRendelesLayout = new javax.swing.GroupLayout(pnlRendeles);
         pnlRendeles.setLayout(pnlRendelesLayout);
         pnlRendelesLayout.setHorizontalGroup(
@@ -94,9 +98,14 @@ public class PizzaGUI extends javax.swing.JFrame {
                             .addComponent(lblDarab))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnlRendelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtfCim, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(pnlRendelesLayout.createSequentialGroup()
+                                .addComponent(txtfCim, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(pnlRendelesLayout.createSequentialGroup()
+                                .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1)
+                                .addGap(79, 79, 79)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -122,7 +131,8 @@ public class PizzaGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pnlRendelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDarab)
-                    .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addContainerGap())
         );
 
@@ -411,6 +421,7 @@ public class PizzaGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbxPepperoni;
     private javax.swing.JCheckBox cbxSonka;
     private javax.swing.JCheckBox cbxSzalami;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblCim;
