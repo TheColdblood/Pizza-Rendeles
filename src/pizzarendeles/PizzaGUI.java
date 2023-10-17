@@ -38,8 +38,6 @@ public class PizzaGUI extends javax.swing.JFrame {
         lblCim = new javax.swing.JLabel();
         lblDarab = new javax.swing.JLabel();
         spnrDarab = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         pnlMeret = new javax.swing.JPanel();
         rbtnKozepes = new javax.swing.JRadioButton();
         rbtnNagy = new javax.swing.JRadioButton();
@@ -75,11 +73,6 @@ public class PizzaGUI extends javax.swing.JFrame {
 
         lblDarab.setText("Darab:");
 
-        jLabel1.setText("Tesztverzió");
-        jLabel1.setToolTipText("");
-
-        jLabel2.setText("Figyelmeztetés");
-
         javax.swing.GroupLayout pnlRendelesLayout = new javax.swing.GroupLayout(pnlRendeles);
         pnlRendeles.setLayout(pnlRendelesLayout);
         pnlRendelesLayout.setHorizontalGroup(
@@ -106,11 +99,7 @@ public class PizzaGUI extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(pnlRendelesLayout.createSequentialGroup()
                                 .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2)
-                                .addGap(30, 30, 30)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -136,9 +125,7 @@ public class PizzaGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pnlRendelesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDarab)
-                    .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -370,14 +357,19 @@ public class PizzaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMegszakitasActionPerformed
 
     private void btnRendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRendelesActionPerformed
-       //boolean vanDarabValasztva = spnrDarab.get() > 0;
-        String uzenet;
-        //if(vanDarabValasztva){
-            uzenet = "Rendelés elküldve! \n 1500ft";
-        //}else{
-        //    uzenet = "Nem adható le a rendelés!";
-        //}
-        JOptionPane.showMessageDialog(null, uzenet, "MEGRENDELVE", 1);
+        
+        boolean vanDarabValasztva; 
+        if((int) spnrDarab.getValue() > 0) {
+            vanDarabValasztva = true;
+            String uzenet;
+            uzenet = "Rendelés elküldve!";
+            JOptionPane.showMessageDialog(null, uzenet, "MEGRENDELVE", 1);
+        } else {
+            vanDarabValasztva = false;
+            String hiba;
+            hiba = "HIBA: Nem küldhető el a rendelés!";
+            JOptionPane.showMessageDialog(null, hiba, "HIBA", 0);
+        }
     }//GEN-LAST:event_btnRendelesActionPerformed
 
     /**
@@ -427,8 +419,6 @@ public class PizzaGUI extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbxPepperoni;
     private javax.swing.JCheckBox cbxSonka;
     private javax.swing.JCheckBox cbxSzalami;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblCim;
